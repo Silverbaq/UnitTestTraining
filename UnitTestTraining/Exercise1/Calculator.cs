@@ -2,28 +2,24 @@ namespace UnitTestTraining.Exercise1
 {
     public class Calculator
     {
-        double Add(double a, double b)
+        public double Add(double a, double b)
         {
-            // TODO: Implement this
-            return 0.0;
+            return a + b;
         }
 
-        double Sub(double a, double b)
+        public double Sub(double a, double b)
         {
-            // TODO: Implement this
-            return 0.0;
+            return a - b;
         }
 
-        double Multi(double a, double b)
+        public double Multi(double a, double b)
         {
-            // TODO: Implement this
-            return 0.0;
+            return a * b;
         }
 
-        double Div(double a, double b)
+        public double Div(double a, double b)
         {
-            // TODO: Implement this
-            return 0.0;
+            return a / b;
         }
     }
 }

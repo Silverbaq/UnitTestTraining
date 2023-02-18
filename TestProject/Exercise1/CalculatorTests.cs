@@ -6,30 +6,54 @@ namespace TestProject.Exercise1
     [TestFixture]
     public class CalculatorTests
     {
-        private Calculator _calculator = new Calculator();
-        
+        private readonly Calculator _calculator = new Calculator();
+
         [Test]
         public void CalculatorCanAdd()
         {
-            // TODO: Implement unit test
+            var a = 0.3;
+            var b = 1.4;
+
+            var expected = a + b;
+            var actual = _calculator.Add(a, b);
+
+            Assert.AreEqual(expected, actual);
         }
 
         [Test]
         public void CalculatorCanSub()
         {
-            // TODO: Implement unit test
+            var a = 0.3;
+            var b = 1.4;
+
+            var expected = a - b;
+            var actual = _calculator.Sub(a, b);
+
+            Assert.AreEqual(expected, actual);
         }
-        
+
         [Test]
         public void CalculatorCanMulti()
         {
-            // TODO: Implement unit test
+            var a = 0.3;
+            var b = 1.4;
+
+            var expected = a * b;
+            var actual = _calculator.Multi(a, b);
+
+            Assert.AreEqual(expected, actual);
         }
-        
+
         [Test]
         public void CalculatorCanDiv()
         {
-            // TODO: Implement unit test
+            var a = 0.3;
+            var b = 1.4;
+
+            var expected = a / b;
+            var actual = _calculator.Div(a, b);
+
+            Assert.AreEqual(expected, actual);
         }
     }
 }

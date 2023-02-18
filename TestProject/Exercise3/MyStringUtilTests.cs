@@ -1,5 +1,4 @@
 using NUnit.Framework;
-using NUnit.Framework.Internal;
 using UnitTestTraining.Exercise3;
 
 namespace TestProject.Exercise3
@@ -10,10 +9,10 @@ namespace TestProject.Exercise3
         public void TestReverse()
         {
             // Arrange
-            string input = "hello";
+            var input = "hello";
 
             // Act
-            string result = MyStringUtil.Reverse(input);
+            var result = MyStringUtil.Reverse(input);
 
             // Assert
             Assert.AreEqual("olleh", result);
@@ -23,12 +22,12 @@ namespace TestProject.Exercise3
         public void TestIsPalindrome()
         {
             // Arrange
-            string input1 = "racecar";
-            string input2 = "hello";
+            var input1 = "racecar";
+            var input2 = "hello";
 
             // Act
-            bool result1 = MyStringUtil.IsPalindrome(input1);
-            bool result2 = MyStringUtil.IsPalindrome(input2);
+            var result1 = MyStringUtil.IsPalindrome(input1);
+            var result2 = MyStringUtil.IsPalindrome(input2);
 
             // Assert
             Assert.IsTrue(result1);
@@ -39,11 +38,11 @@ namespace TestProject.Exercise3
         public void TestCountOccurrences()
         {
             // Arrange
-            string input = "hello world";
+            var input = "hello world";
 
             // Act
-            int result1 = MyStringUtil.CountOccurrences(input, 'l');
-            int result2 = MyStringUtil.CountOccurrences(input, 'z');
+            var result1 = MyStringUtil.CountOccurrences(input, 'l');
+            var result2 = MyStringUtil.CountOccurrences(input, 'z');
 
             // Assert
             Assert.AreEqual(3, result1);
@@ -54,10 +53,10 @@ namespace TestProject.Exercise3
         public void TestRemoveWhitespace()
         {
             // Arrange
-            string input = "hello world";
+            var input = "hello world";
 
             // Act
-            string result = MyStringUtil.RemoveWhitespace(input);
+            var result = MyStringUtil.RemoveWhitespace(input);
 
             // Assert
             Assert.AreEqual("helloworld", result);

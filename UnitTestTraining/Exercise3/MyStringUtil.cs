@@ -7,26 +7,32 @@ namespace UnitTestTraining.Exercise3
     {
         public static string Reverse(string input)
         {
-            // TODO: Implement code
-            return input;
+            char[] charArray = input.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
         }
 
         public static bool IsPalindrome(string input)
         {
-            // TODO: Implement code
-            return false;
+            return input == Reverse(input);
         }
 
         public static int CountOccurrences(string input, char target)
         {
-            // TODO: Implement code
-            return 0;
+            int count = 0;
+            foreach (char c in input)
+            {
+                if (c == target)
+                {
+                    count++;
+                }
+            }
+            return count;
         }
 
         public static string RemoveWhitespace(string input)
         {
-            // TODO: Implement code
-            return "";
+            return new string(input.Where(c => !Char.IsWhiteSpace(c)).ToArray());
         }
     }
 }

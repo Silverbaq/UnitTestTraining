@@ -10,25 +10,33 @@ namespace UnitTestTraining.Exercise4
 
         public void Push(T item)
         {
-            // TODO: Implement code
+            _items.Add(item);
         }
 
         public T Pop()
         {
-            // TODO: Implement code
-            return _items.First();
+            if (_items.Count == 0)
+            {
+                throw new InvalidOperationException("Stack is empty");
+            }
+            int lastIndex = _items.Count - 1;
+            T lastItem = _items[lastIndex];
+            _items.RemoveAt(lastIndex);
+            return lastItem;
         }
 
         public T Peek()
         {
-            // TODO: Implement code
-            return _items.First();
+            if (_items.Count == 0)
+            {
+                throw new InvalidOperationException("Stack is empty");
+            }
+            return _items[_items.Count - 1];
         }
 
         public bool IsEmpty()
         {
-            // TODO: Implement code
-            return false;
+            return _items.Count == 0;
         }
     }
 }
