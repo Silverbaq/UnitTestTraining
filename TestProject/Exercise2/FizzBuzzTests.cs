@@ -9,25 +9,53 @@ namespace TestProject.Exercise2
         [Test]
         public void TestFizz()
         {
-            // TODO: Implement unit test
+            // Arrange
+            var number = 3;
+
+            // Act
+            var result = FizzBuzz.Convert(number);
+
+            // Assert
+            Assert.AreEqual("Fizz", result);
         }
 
         [Test]
         public void TestBuzz()
         {
-            // TODO: Implement unit test
+            // Arrange
+            int number = 5;
+
+            // Act
+            string result = FizzBuzz.Convert(number);
+
+            // Assert
+            Assert.AreEqual("Buzz", result);
         }
 
         [Test]
         public void TestFizzBuzz()
         {
-            // TODO: Implement unit test
+            // Arrange
+            int number = 15;
+
+            // Act
+            string result = FizzBuzz.Convert(number);
+
+            // Assert
+            Assert.AreEqual("FizzBuzz", result);
         }
 
         [Test]
         public void TestNumber()
         {
-            // TODO: Implement unit test
+            // Arrange
+            int number = 7;
+
+            // Act
+            string result = FizzBuzz.Convert(number);
+
+            // Assert
+            Assert.AreEqual(number.ToString(), result);
         }
     }
 }
